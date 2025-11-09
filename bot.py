@@ -24,5 +24,14 @@ def send_quote(message):
     chosen_quote = random.choice(quotes)
     bot.reply_to(message, chosen_quote)
 
+@bot.message_handler(commands=['iqjoke'])
+def iq_joke(message): 
+    iqjoke_rules = [
+    "Читай 1500 книг в час, пей 20 проливов пуэра"
+    "Медитируй на глотке мира"
+    "Находи киру каждый день"
+    chosen_rule = random.choice(iqjoke_rules)		
+    bot.reply_to(message, "chosen_rule")
+
 print("Бот запущен...")
 bot.polling()
